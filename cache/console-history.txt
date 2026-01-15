@@ -1,0 +1,12 @@
+.help
+.exit
+console.log(receipt);
+const receipt = await tx.wait();
+);  { value: ethers.parseEther("0.05") }  "0x7bb5a666950b5ab0a35109d4018a456ce4c161bd3355c03868274b7bcf208a6d4209a6180df53a6f1197c332e552119dc7be7a34eca573b5c39d8755ceb702d21b",  "0xa5a059739f52124fa65648e7b6a7f4f7dafa29196fca97237cbd399a0c1fe158",await contract.insertTransaction(
+await contract.insertTransaction(0xa5a059739f52124fa65648e7b6a7f4f7dafa29196fca97237cbd399a0c1fe158, 0x7bb5a666950b5ab0a35109d4018a456ce4c161bd3355c03868274b7bcf208a6d4209a6180df53a6f1197c332e552119dc7be7a34eca573b5c39d8755ceb702d21b, { value: ethers.parseEther("0.05") });
+const contract = await ethers.getContractAt("CertifiedFinancialRegistry","0x5fbdb2315678afecb367f032d93f642f64180aa3");
+const contract = await ethers.getContractAt("CertifiedFinancialRegistry","0x5fbdb2315678afecb367f032d93f642f64180aa3")
+.exit
+exit
+await contract.insertTransaction(operationHash, signature, { value: ethers.parseEther("0.05") });
+const contract = await ethers.getContractAt("CertifiedFinancialRegistry","0x5fbdb2315678afecb367f032d93f642f64180aa3");

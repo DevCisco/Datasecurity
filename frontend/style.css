@@ -1,0 +1,101 @@
+/* === STILE GLOBALE === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f6fa;
+    color: #2f3640;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #273c75;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* === BOTTONI === */
+button, .btn {
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Colori personalizzati */
+.btn-primary { background-color: #40739e; border: none; color: #fff; }
+.btn-success { background-color: #44bd32; border: none; color: #fff; }
+.btn-info    { background-color: #0097e6; border: none; color: #fff; }
+.btn-secondary { background-color: #718093; border: none; color: #fff; }
+
+/* === FORM DI INSERIMENTO === */
+#transactionForm {
+    max-width: 500px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+#transactionForm input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #dcdde1;
+    font-size: 1rem;
+}
+
+#transactionForm button {
+    width: 100%;
+}
+
+/* === LISTA TRANSAZIONI === */
+#transactionsList {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#txList {
+    list-style: none;
+    padding: 0;
+}
+
+#txList li {
+    background: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+#txList li span.timestamp {
+    font-size: 0.85rem;
+    color: #718093;
+}
+
+/* === LINK STILE === */
+a.btn {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+    #transactionForm, #transactionsList {
+        width: 90%;
+        padding: 20px;
+    }
+    h1 { font-size: 1.5rem; }
+}
