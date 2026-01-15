@@ -83,15 +83,41 @@ window.submitTransaction = async function() {
 
 // === FUNZIONE PER CARICARE TRANSAZIONI (viewTransactions.html) ===
 window.loadTransactions = async function() {
+    // Controlla che MetaMask sia collegato
     if (!signer) {
         console.log("Collega MetaMask per vedere le transazioni");
         return;
     }
 
+    // Recupera l'elemento della lista dal DOM
     const txList = document.getElementById("txList");
     if (!txList) return;
 
-    // Pulisce lista
+    // Pulisce la lista
     txList.innerHTML = "";
 
+    try {
+
+        // Chiama la funzione view/external del contratto
+        const transactions = await contract.getMyTransactions();
+
+        if (transactions.length === 0) {
+            txList.innerHTML = "<li>Nessuna transazione trovata</li>";
+            return;
+        }
+
+        // Itera sulle transazioni e mostra i dati
+        transactions.forEach((tx, index) => {
+            // tx è un oggetto con le proprietà della struct TransactionRecord
+            // Ad esempio: tx.operationHash, tx.timestamp
+            const li = document.createElement("li");
+            const timestampNumber = Number(tx.timestamp); // conversione sicura da BigInt a Number
+            const dateString = new Date(timestampNumber * 1000).toLocaleString();
+            li.textContent = `${index + 1} - OperationHash: ${tx.operationHash}, Timestamp: ${dateString}`;
+            txList.appendChild(li);
+        });
+    } catch (err) {
+        console.error("Errore caricamento transazioni:", err);
+        txList.innerHTML = "<li>Errore nel recupero delle transazioni</li>";
+    }
 };
