@@ -4,7 +4,7 @@ import readline from "readline";
 
 // === CONFIGURAZIONE ===
 // Qui metti la chiave privata del trusted signer (NON condividerla)
-const PRIVATE_KEY = "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d"; 
+const PRIVATE_KEY = "0x"; 
 const wallet = new ethers.Wallet(PRIVATE_KEY);
 
 // === INTERFACCIA CMD ===
@@ -34,3 +34,4 @@ rl.question("Inserisci operazione: ", async (input) => {
         console.log("Operation Hash:", ethSignedMessageHash);
         console.log("Signature    :", signature);
 });
+
